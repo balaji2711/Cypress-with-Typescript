@@ -1,0 +1,24 @@
+{
+  "name": "cypresstypescript",
+  "version": "1.0.0",
+  "description": "Cypress Hands on Tests",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "Balaji G",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.13.0"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress-mochawesome-reporter": "^3.5.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "typescript": "^5.0.4"
+  }
+}
