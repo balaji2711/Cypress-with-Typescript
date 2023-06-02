@@ -27,5 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - run: npm install -g cypress
+    - run: npm install -D typescript
+    - run: npm install --save-dev mochawesome
+    - run: npm install mochawesome-merge --save-devt
+    - run: npm install --save-dev @testing-library/cypress
+    - run: cypress run --reporter mochawesome --reporter-options reportDir="cypress/results"   
+    - run: npx mochawesome-merge "cypress/results/report.json" > mochawesome.json
+    - run: npx marge mochawesome.json
